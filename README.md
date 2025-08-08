@@ -1,12 +1,44 @@
-# React + Vite
+# AutoInsurance Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend aplikasi AutoInsurance untuk input data polis asuransi kendaraan dan menampilkan data polis yang sudah dibuat.
 
-Currently, two official plugins are available:
+## Fitur Utama
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Form input data polis baru (nama pemegang polis, mobil, dll)  
+- Submit data ke backend API untuk membuat polis baru dengan nomor polis yang otomatis digenerate backend  
+- Menampilkan data polis yang sudah dibuat (opsional, tergantung fitur frontend)  
+- Validasi input dasar di form  
 
-## Expanding the ESLint configuration
+## Teknologi
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Framework: React.js / Vue.js / (sesuaikan)  
+- HTTP Client: fetch / axios  
+- State management: (sesuaikan jika ada)  
+- Styling: (sesuaikan, misal Tailwind CSS, CSS biasa, dll)  
+
+## Cara Instalasi
+
+1. Clone repository ini  
+   `git clone <repo-url>`  
+   `cd <frontend-folder>`
+
+2. Install dependencies  
+   `npm install`  
+   atau  
+   `yarn install`
+
+3. Konfigurasi URL backend API  
+
+4. Jalankan development server  
+   `npm run dev`  
+   atau  
+   `yarn dev`
+
+## Cara Penggunaan
+
+- Buka browser dan akses `http://localhost:5173` (atau port yang digunakan)  
+- Isi form data polis baru  
+- Klik tombol submit  
+- Data akan dikirim ke backend API `/api/Policy` secara POST  
+- Backend akan generate `PolicyNumber` otomatis dan simpan data  
+- Frontend akan menerima response data lengkap dan bisa menampilkan nomor polis hasil generate  
